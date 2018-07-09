@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button, Col, Grid, Row } from 'react-bootstrap';
+import { Col, Grid, Row } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
 import ButtonToolbar from './components/ButtonToolbar';
 import JobDetails from './pages/JobDetails';
@@ -73,4 +73,7 @@ const mapStateToProps = state => ({
 });
 const mapDispatchToProps = { fetchJobs };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
