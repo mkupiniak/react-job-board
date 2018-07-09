@@ -1,0 +1,20 @@
+body {
+  background: #ecf0f1;
+}
+
+#postBtn {
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+}
+
+.panel-container {
+  overflow-y: scroll;
+  height: calc(100vh - 193px);
+}
+
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}

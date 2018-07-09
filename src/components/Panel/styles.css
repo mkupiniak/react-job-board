@@ -1,0 +1,50 @@
+.panel {
+  border: none;
+}
+
+.panel-label {
+  border: 1px solid #ccc;
+  float: right;
+  padding: 1px 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.panel-default {
+  border-left: 5px solid #f39c1c;
+}
+
+.panel-body {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 2px 4px 0 #ccc;
+  transition: box-shadow 0.2s ease-out;
+  cursor: pointer;
+}
+
+.panel-body:hover {
+  box-shadow: 0 6px 8px 0 #ccc;
+}
+
+.media img {
+  width: 64px;
+  max-height: 64px;
+}
+
+.media-heading {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.media-left {
+  vertical-align: middle;
+  padding-right: 15px;
+}
+
+.media-body > small {
+  color: #999;
+  display: block;
+}
