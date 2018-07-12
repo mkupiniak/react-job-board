@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import './styles.css';
+import PropTypes from 'prop-types';
 
 const JobDetails = ({ details, history }) => {
   const redirectToHome = () => {
@@ -37,6 +38,17 @@ const JobDetails = ({ details, history }) => {
   ) : (
     redirectToHome()
   );
+};
+
+JobDetails.propTypes = {
+  details: PropTypes.shape({
+    company: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    how_to_apply: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
+  history: PropTypes.object,
 };
 
 export default JobDetails;

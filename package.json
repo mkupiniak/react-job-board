@@ -2,7 +2,10 @@
   "name": "Job-board",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mkupiniak.github.io/react-job-board",
   "dependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -12,6 +15,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-spinkit": "^3.0.0",
+    "react-test-renderer": "^16.4.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
@@ -21,9 +25,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^1.2.0",
     "prettier": "1.13.7",
     "redux-devtools-extension": "^2.13.5"
   }

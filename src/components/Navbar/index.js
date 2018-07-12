@@ -17,7 +17,7 @@ const Navbar = ({ onClick }) => {
 };
 
 Navbar.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default Navbar;

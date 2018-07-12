@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as moment from 'moment';
+import moment from 'moment';
 import { Panel as RBPanel, Media } from 'react-bootstrap';
 import './styles.css';
 
@@ -24,6 +24,7 @@ const Panel = ({ history, job }) => (
 );
 
 Panel.propTypes = {
+  history: PropTypes.object.isRequired,
   job: PropTypes.shape({
     company_logo: PropTypes.string,
     company: PropTypes.string,

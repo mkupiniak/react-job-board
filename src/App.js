@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Col, Grid, Row } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -6,12 +7,11 @@ import ButtonToolbar from './components/ButtonToolbar';
 import JobDetails from './pages/JobDetails';
 import Navbar from './components/Navbar';
 import PanelList from './components/PanelList';
-import { fetchJobs } from './actions';
+import fetchJobs from './utils/fetch';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   cities = ['Atlanta', 'Chicago', 'New York', 'San Francisco'];
-  languages = ['JavaScript', 'PHP', 'Python', 'Java'];
 
   componentDidMount() {
     this.props.fetchJobs();
@@ -65,6 +65,13 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  errors: PropTypes.bool,
+  fetchJobs: PropTypes.func,
+  isFetching: PropTypes.bool,
+  jobsById: PropTypes.object,
+};
 
 const mapStateToProps = state => ({
   errors: state.jobs.errors,
